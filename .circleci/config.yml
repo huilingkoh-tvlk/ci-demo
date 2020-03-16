@@ -4,7 +4,7 @@ jobs:
     steps:
       - run: "echo 'Run something before checking out code?'"
       - checkout
-      - run: "echo 'yay circle ci'"
+      - run: "echo 'yay circle ci once'"
       - run: "echo 'yay circle ci again!'"
 workflows:
   version: 2
