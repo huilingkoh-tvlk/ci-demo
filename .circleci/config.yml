@@ -1,0 +1,24 @@
+version: 2
+jobs:
+  ci:
+    steps:
+      - run: "echo 'Run something before checking out code?'"
+      - checkout
+      - run: "echo 'yay circle ci'"
+      - run: "echo 'yay circle ci again!'"
+workflows:
+  version: 2
+  weekly:
+    triggers:
+      - schedule:
+          # run at 1700UTC (3am +8GMT) every monday
+          cron: "0 19 * * 1"
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - ci
+  every_pr:
+    jobs:
+      - ci:
