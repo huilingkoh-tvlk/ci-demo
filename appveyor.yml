@@ -10,7 +10,7 @@ branches:
 install:
   - echo "install something"
 build_script:
-  - echo "i'm building!"
+  - echo "i'm building!!"
 before_test:
   - echo "just before testing"
 test_script:
