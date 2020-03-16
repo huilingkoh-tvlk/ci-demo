@@ -1,0 +1,17 @@
+image:
+  - Visual Studio 2019
+stack: docker
+services:
+  - docker
+configuration: Release
+branches:
+  only:
+    - master
+install:
+  - echo "install something"
+build_script:
+  - echo "i'm building!"
+before_test:
+  - echo "just before testing"
+test_script:
+  - echo "I'm testing"
